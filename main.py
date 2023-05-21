@@ -24,7 +24,9 @@ print(pathList)
 
 classDictionary = {0:None,
              1:0,
-             2:1}
+             2:0,
+             3:1,
+             4:1}
 
 while True:
     _, img = cap.read()
@@ -39,13 +41,12 @@ while True:
     classID = prediction[1] 
     
     if classID !=0:
-        imgBackground = cvzone.overlayPNG(imgBackground, imgWasteList[classID-1], (800, 200))
+        imgBackground = cvzone.overlayPNG(imgBackground, imgWasteList[classID-1], (800, 150))
         imgBackground = cvzone.overlayPNG(imgBackground, imgBinsList[classDictionary[classID]], (800, 500))
     
 
     
-    imgBackground[100:100+300, 100:100+300] = imgResize
-    # Displays the images here:
-    # cv2.imshow("Image", img)
+    imgBackground[100:100+300, 75:75+300] = imgResize
+    
     cv2.imshow("Output", imgBackground)
     cv2.waitKey(1)
