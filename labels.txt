@@ -1,0 +1,5 @@
+0 Nothing
+1 RedCup
+2 Wrapper
+3 BananaStem
+4 Cardboard
